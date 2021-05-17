@@ -1,0 +1,10 @@
+data/combined/*.pkl
+data/pre-processed/*.pkl
+data/text/*.pkl
+trained_models/audio/*.pkl
+trained_models/combined/*.pkl
+trained_models/text/*.pkl
+lstm_classifier/combined/runs/*.pth
+lstm_classifier/s2e/runs/*.pth
+lstm_classifier/t2e/runs/*.pth
+lstm_classifier/t2e/embeddings/*.txt
