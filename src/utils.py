@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import itertools
 import numpy as np
 from sklearn.metrics import confusion_matrix, f1_score, accuracy_score, precision_score, recall_score
+from config import data_config 
 import os
 import pickle
 
@@ -35,6 +36,8 @@ def plot_confusion_matrix(model, cm, classes,
     plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
+    file_name = model + '_' +  data_config['mode'] + '.png'
+    plt.savefig(file_name)
     plt.show()
     
 def one_hot_encoder(true_labels, num_records, num_classes):
@@ -90,4 +93,6 @@ def get_matrixes(tuples, classes, names, tick_marks, y_test, cmap=plt.cm.Blues):
         plt.yticks(tick_marks, classes)
         index += 1
     fig.tight_layout()
+    file_name = 'mosaico_' +  data_config['mode'] + '.png'
+    plt.savefig(file_name)
     plt.show()
