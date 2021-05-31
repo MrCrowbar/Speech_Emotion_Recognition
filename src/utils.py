@@ -36,7 +36,7 @@ def plot_confusion_matrix(model, cm, classes,
     plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
-    file_name = model + '_' +  data_config['mode'] + '.png'
+    file_name = model + '_' +  str(data_config['mode']) + '.png'
     plt.savefig(file_name)
     plt.show()
     
@@ -93,6 +93,6 @@ def get_matrixes(tuples, classes, names, tick_marks, y_test, cmap=plt.cm.Blues):
         plt.yticks(tick_marks, classes)
         index += 1
     fig.tight_layout()
-    file_name = 'mosaico_' +  data_config['mode'] + '.png'
+    file_name = 'mosaico_' +  str(data_config['mode']) + '.png'
     plt.savefig(file_name)
     plt.show()
